@@ -31,7 +31,7 @@ class App extends Component {
     const { data, country } = this.state
     return (
       <div className={styles.container} >
-        <img src={coronaImage} alt="Corona Image" />
+        <img className={styles.image} src={coronaImage} alt="Corona Image" />
         <Cards data={data} country={country} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
