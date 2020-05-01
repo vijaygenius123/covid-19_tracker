@@ -1,9 +1,11 @@
 import React from 'react'
-
+import { NativeSelect, FormControl } from '@material-ui/core'
 export default function CountryPicker() {
     return (
-        <div>
-            <h1>CountryPicker</h1>
-        </div>
+        <FormControl>
+            <NativeSelect>
+                <option value="global">Global</option>
+            </NativeSelect>
+        </FormControl>
     )
 }
