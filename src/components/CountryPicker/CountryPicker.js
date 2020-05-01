@@ -4,7 +4,7 @@ import { fetchCountries } from '../../api'
 
 import styles from './CountryPicker.module.css'
 
-export default function CountryPicker() {
+export default function CountryPicker({ handleCountryChange }) {
     const [countries, setcountries] = useState([])
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function CountryPicker() {
     }, [setcountries])
     return (
         <FormControl>
-            <NativeSelect>
+            <NativeSelect onChange={e => handleCountryChange(e.target.value)}>
                 <option value="global">Global</option>
                 {
                     countries.map(country => (
